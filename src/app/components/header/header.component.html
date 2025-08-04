@@ -1,0 +1,31 @@
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a routerLink="/">Solar Energy</a>
+    </div>
+    <div class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="nav-links" [class.active]="isMenuOpen">
+      <a routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        (click)="closeMenu()">Home</a>
+
+      <a routerLink="/our-section"
+        routerLinkActive="active"
+        (click)="closeMenu()">Services</a>
+
+      <a routerLink="/about"
+        routerLinkActive="active"
+        (click)="closeMenu()">About Us</a>
+
+      <a routerLink="/contact-us"
+        routerLinkActive="active"
+        (click)="closeMenu()">Contact</a>
+    </div>
+  </nav>
+</header>
+
